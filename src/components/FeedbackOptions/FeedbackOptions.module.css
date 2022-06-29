@@ -1,6 +1,5 @@
 .wrap{
     display: flex;
-    margin-bottom: 20px;
  
 }
 .item:not(:last-child){
