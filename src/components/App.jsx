@@ -34,6 +34,7 @@ class App extends React.Component {
   render() {
     const total = this.countTotalFeedback();
     const positivePercentage = `${this.countPositiveFeedbackPercentage()}%`;
+    const { good, neutral, bad } = this.state;
     return (
       <div className="wraper">
         <h1> Pleas leave feadback</h1>
@@ -46,9 +47,9 @@ class App extends React.Component {
         <Section>
           {total > 0 ? (
             <Statistics
-              good={this.state.good}
-              neutral={this.state.neutral}
-              bad={this.state.bad}
+              good={good}
+              neutral={neutral}
+              bad={bad}
               total={total}
               positivePercentage={positivePercentage}
             />
