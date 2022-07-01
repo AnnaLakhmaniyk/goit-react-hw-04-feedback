@@ -37,14 +37,13 @@ class App extends React.Component {
     const { good, neutral, bad } = this.state;
     return (
       <div className="wraper">
-        <h1> Pleas leave feadback</h1>
-        <Section>
+        <Section title="Please leave feedback">
           <FeedbackOptions
             options={Object.keys(this.state)}
             onLeaveFeedback={this.changesValueState}
           />
         </Section>
-        <Section>
+        <Section title="Statistics">
           {total > 0 ? (
             <Statistics
               good={good}
